@@ -1,6 +1,6 @@
 import pyautogui, time
 
-f=open("lyrics.txt","r")
+f=open("lyrics.txt","r") #file named 'lyrics.txt' need to be in the same folder of course
 count = 0
 
 
