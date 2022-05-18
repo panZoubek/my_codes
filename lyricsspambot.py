@@ -11,7 +11,7 @@ trr = int(ttp)
 time.sleep(1)
 
 
-print("How many seconds do I have to wait?")
+print("How many seconds will take to start")
 tmslp = input()
 tmslp = int(tmslp)
 
