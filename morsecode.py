@@ -10,20 +10,20 @@ def wholetimer():
     print("--> You spent in this program:","%3.2f"%ttrr,"seconds...")
 
 def reception():
-    print("---=> If you want to go back type 'back' and you can get out using CTRL + C or typing end... Idk why you entered this place.")
+    print("\n---=> If you want to go back type 'back' and you can get out using CTRL + C or typing end... Idk why you entered this place.")
 
     #time.sleep(1)
 
-    print("\n\n--> Hi stranger or someone... What do you want to do here?")
+    print("\n--> Hi stranger or someone... What do you want to do here?")
     #time.sleep(4)
 
-    print("\n\n--> You can do only something with morse code :/")
+    print("\n--> You can do only something with morse code :/")
     #time.sleep(3)
 
-    print("\n\n--> I am sure you will choose...")
+    print("\n--> I am sure you will choose...")
     #time.sleep(2.5)
 
-    print("\n\n--> You can practice single letter by typing 'practice'...\n    You can let print all letters and numbers from morse code by typing 'print'...")
+    print("\n--> You can practice single letter by typing 'practice'...\n    You can let print all letters and numbers from morse code by typing 'print'...")
     #time.sleep(3)
 reception()
 
@@ -97,8 +97,8 @@ while True:
                 what_student_type = ms.m
 
             else:
-                print("\n\n---=> This command doesn't exist or is unvalid here. Try again :]")
-                break
+                print("\n---=> This command doesn't exist or is unvalid here. Try again :]")
+                back_ff_input = 1
 
             input_msg = "--> "+ str(what_student_get) + "\n==> "
             input_time = time.time()
@@ -134,6 +134,8 @@ while True:
                 print("--> Your responce time was:","%3.2f"%response_time)
                 incorrect_score += 1
 
+            
+
 
             responce_time_diametr = rtd_total / rtd
 
@@ -152,5 +154,6 @@ while True:
 
 
     else:
-        print("\n\n---=> This command doesn't exist or is unvalid here. Try again :]")
+        print("\n---=> This command doesn't exist or is unvalid here. Try again :]")
         back_ff_input = 1
+
