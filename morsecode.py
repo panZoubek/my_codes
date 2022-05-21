@@ -130,7 +130,7 @@ while True:
 
             if input_symbol != what_student_type:
                 response_time_and_diametr_calc()
-                print("--> incorrect... it was: ",ms.p,"\n")
+                print("--> incorrect... it was: ",what_student_type,"\n")
                 print("--> Your responce time was:","%3.2f"%response_time)
                 incorrect_score += 1
 
