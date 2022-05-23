@@ -44,18 +44,25 @@ while True:
 
     if back_ff_input == 1:
         print("---=> You can get out using CTRL + C or typing end... If you later want to go back you can type 'back'...")
-        print("\n\n--> You can practice single letter by typing 'practice'...\n    You can let print all letters and numbers from morse code by typing 'print'...")
+        print("\n--> You can practice single letter by typing 'practice'...\n    You can let print all letters and numbers from morse code by typing 'print'...")
         the_first_fucking_input = input("\n\n==> ")
         back_ff_input = 0
 
-    if the_first_fucking_input == "end":
-        endend()
-        wholetimer()
-        exit(0)
+
+
+    elif the_first_fucking_input == "print":
+        print("")
+        for xx in range(len(morselist)):
+            print(morselist[xx].p,morselist[xx].m)
+        print("")
+        for uu in range(len(morsenumbers)):
+            print(morsenumbers[uu].p,morsenumbers[uu].m)
+        print("")
+        back_ff_input = 1
 
 
 
-    if the_first_fucking_input == "practice":
+    elif the_first_fucking_input == "practice":
         print("\n\n")
         print("--> If you want to get morse code and type what letter it is type 'letter' and if you want to get letter and type morse type 'morse'.")
         practice_input = input("\n==> ")
@@ -83,12 +90,12 @@ while True:
                 wholetimer()
                 exit(0)
 
-            if practice_input == "back":
+            elif practice_input == "back":
                 print("\n\n--> You went back")
                 back_ff_input = 1
                 break
 
-            if practice_input == "letter":
+            elif practice_input == "letter":
                 what_student_type = ms.p
                 what_student_get = ms.m
 
@@ -105,7 +112,7 @@ while True:
             input_symbol = input(str(input_msg))
             rrr = time.time() - special_timer
 
-            if input_symbol == "end":
+            if input_symbol == "end": #end
                 print("\n--> You have ended it.","\n--> You have done correct",correct_score,"letters and",incorrect_score,"incorrect")
                 if responce_time_diametr > 0:
                     print("--> Your avarage response time was:","%3.2f"%responce_time_diametr)
@@ -113,46 +120,37 @@ while True:
                 wholetimer()
                 exit(0)
 
-            if input_symbol == "back":
+            elif input_symbol == "back": #back
                 print("\n--> You ended it.","\n--> You have done correct",correct_score,"letters and",incorrect_score,"incorrect")
                 if responce_time_diametr > 0:
-                    print("--> Your avarage response time was:","%3.2f"%responce_time_diametr)
+                    print("--> Your avarage response time was:","%3.2f seconds"%responce_time_diametr)
                 print("--> You were practicing:","%3.2f"%rrr,"seconds")
-                print("\n--> You went back.")
+                print("\n\n--> You went back.\n")
                 back_ff_input = 1
                 break
 
-            if input_symbol == what_student_type:
+            elif input_symbol == what_student_type: #correct answer
                 response_time_and_diametr_calc()
-                print("--> correct\n")
-                print("--> Your responce time was:","%3.2f"%response_time)
+                print("--> correct")
+                print("--> Your responce time was:","%3.2f\n"%response_time)
                 correct_score += 1
 
-            if input_symbol != what_student_type:
+            elif input_symbol != what_student_type: #incorrect answer
                 response_time_and_diametr_calc()
-                print("--> incorrect... it was: ",what_student_type,"\n")
-                print("--> Your responce time was:","%3.2f"%response_time)
+                print("--> incorrect... it was: ",what_student_type)
+                print("--> Your responce time was:","%3.2f\n"%response_time)
                 incorrect_score += 1
-
-            
-
 
             responce_time_diametr = rtd_total / rtd
 
 
 
-    if the_first_fucking_input == "print":
-        print("")
-        for xx in range(len(morselist)):
-            print(morselist[xx].p,morselist[xx].m)
-        print("")
-        for uu in range(len(morsenumbers)):
-            print(morsenumbers[uu].p,morsenumbers[uu].m)
-        back_ff_input = 1
+    elif the_first_fucking_input == "end": #end
+        endend()
+        wholetimer()
+        exit(0)
 
-
-
-
+    
     else:
         print("\n---=> This command doesn't exist or is unvalid here. Try again :]")
         back_ff_input = 1
